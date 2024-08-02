@@ -1,0 +1,99 @@
+body{
+    background-image: url(image/img_arbre.jpg);
+    justify-content: center;
+    justify-items: center;
+    
+    
+}
+.all{
+    
+   border: solid 3px #3d3d3d;
+   border-radius: 7px;
+   background-color:rgba(225, 225, 225, .4);
+   max-width: 1000px;
+   height: 500px;
+   position: relative;
+   left: 13%;
+   top: 10px;
+   backdrop-filter: blur(5px);
+ 
+   
+   
+   
+}
+.bb{
+    margin-left: 20px;
+}
+input{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    margin-right: 20px;
+    background-color: white;
+    flex-wrap: wrap;
+    outline: none;
+    transform: translateY(-40);
+   
+    
+}
+h1{
+    text-align: center;
+    color: white;
+}
+.btn{
+    padding: 10px;
+    font-size: 20px;
+    width: 45%;
+    position: relative;
+    left: 230px;
+    top: 40px;
+    background-color: white;
+    color:  rgb(68, 117, 252);
+
+}
+.tbl{
+    
+    border-collapse: collapse;
+    min-width: 800px;
+    width: auto;
+    cursor: pointer;
+    margin: 100px, auto;
+    background-color: whitesmoke;
+    position: relative;
+    left: 10%;
+    top: 150px;
+    border: 1px solid gray;
+    
+    
+}
+thead tr{
+    background-color: blueviolet;
+    text-align: center;
+}
+th,td{
+    padding: 10px;
+}
+tbody .sss, .xxx, th{
+    border: solid 1px gray;
+}
+a{
+    text-decoration: none;
+    font-size: 25px;
+    justify-content: space-between;
+    color: #fff
+}
+header{
+    border: none;
+    background: transparent;
+    backdrop-filter: 9px;
+    padding: 20px;
+}
+.ppp{
+    margin-left: 20px;
+}
+.pv{
+    margin-left: 30px;
+}
+
+

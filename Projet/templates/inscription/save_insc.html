@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="Fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Inscrire Etudiant</title>
+</head>
+<header> 
+    
+
+</header>
+<body>
+    <div class="all">
+        <form class="" method="POST" action="">
+            {% csrf_token %}
+            <table>
+                <h1>Inscription</h1>
+                <tr>
+                    <td class="ligne">
+                        <select name="etudiant">
+                            {% for etudiant in etudiants  %}
+                                    <option value="{{etudiant.id}}">{{etudiant.nom}} {{etudiant.postnom}} {{etudiant.prenom}} </option>
+                            {% endfor %}
+                        </select>
+                        
+                    </td>
+                    <td class="ligne">
+                        <select name="promotion">
+                            {% for promotion in promotions  %}
+                                <option value="{{promotion.id}}">{{promotion.designation}}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td class="ligne">
+                        <select name="faculte">
+                            {% for faculte in facultes  %}
+                                <option value="{{faculte.id}}">{{faculte.designation}}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <tr>
+                    </tr>    
+                    
+                </tr>
+                       
+                
+            </table>
+
+            <input type="submit" class="btn" value="Inscrire"/><br>
+            
+        </form>
+    </div>
+    
+       
+                
+
+          
+           
+
+
+</body>
+</html>

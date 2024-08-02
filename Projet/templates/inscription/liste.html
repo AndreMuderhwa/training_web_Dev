@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'liste.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LISTE D'INSCRIPTION DES ETUDIANT</h1>
+    <table class="tbl">
+        <thead>
+            <tr >
+                <th>Id</th>
+                <th>nom</th>
+                <th>postnom</th>
+                <th>prenom</th>
+                <th>sexe</th>
+                <th>image</th>
+            
+              
+            </tr>
+
+        </thead>
+
+        <tbody >
+            {% for etudiant in listeEtudiant %}
+                <tr class="sss">
+                    <td class="xxx">{{etudiant.id}} </td>
+                    <td class="xxx">{{etudiant.nom}} </td>
+                    <td class="xxx">{{etudiant.postnom}} </td>
+                    <td class="xxx">{{etudiant.prenom}} </td>
+                    <td class="xxx">{{etudiant.sexe}} </td>
+                    <td class="xxx"><img src="{{etudiant.imageURL}}" style="width: 40px; height: 40px; border-radius: 50%;"/> </td>
+                    <td><a href="/update/{{etudiant.id}}">Modifier</a></td>
+                    <td><a href="/delete/{{etudiant.id}}">Supprimer</a></td>
+                </tr>
+            {% endfor %}
+           
+        </tbody>
+       
+    </table>
+</body>
+</html>

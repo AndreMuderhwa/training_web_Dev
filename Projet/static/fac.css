@@ -1,0 +1,36 @@
+body{
+    background-color: #fff;
+
+}
+table{
+    border: solid 1px black;
+    width: 1250px;
+    background-color: #fff;
+    margin: 55px;
+    position: relative;
+    top: 70px;
+    margin-bottom: 5px;
+   
+  
+    border-collapse: collapse;
+}
+th td{
+    text-align: left;
+    font-size: small;
+
+}
+tbody  tr, td, th{
+    padding: 8px;
+    border: 1px solid gray;
+    margin-bottom: 15px;
+    text-align: left;
+}
+tbody td{
+    padding: 15px;
+    min-width: 90px;
+    width: auto;
+}
+h1{
+    text-align: center;
+    font-weight: bolder;
+}

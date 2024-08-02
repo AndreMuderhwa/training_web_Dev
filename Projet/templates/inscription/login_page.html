@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    {%  if not request.user.is_authenticated %}
+    <div>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <input type="text" name="username"/>
+            <input type="password" name="password"/>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    
+    {% if error %}
+        <div>
+                <p style="color: red;">{{error}}</p>
+        </div>
+    {% endif %}
+
+    {% else %}
+    <div>
+        <p>Vous etes deja connecte voulez-vous vous deconnecté ??? <a href="/logout/">Logout</a></p>
+    </div>
+    
+    {% endif %}
+</body>
+</html>

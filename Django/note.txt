@@ -1,0 +1,29 @@
+DJANGO = framework MVT = Modele vue template 
+
+ORM = Object Relational Mapper
+Admin par defaut
+========================================================
+
+The web framework for perfectionists with deadlines.
+
+pip  => gestionnaire de paquet de python
+npm =+> node package module 
+
+machine physique/ env virtuel 
+
+cmd = python -m venv nomDossier
+activer => nomDossier\Scripts\activate
+
+=> pip install django
+
+==========================================
+En django un project se structure en application
+
+=> django-admin startproject Gestion_Stock : project
+=> django-admin startapp stock            : application
+
+python manage.py runserver
+
+python manage.py makemigrations      : detecter les changements
+python manage.py migrate             : appliquer les changements
+

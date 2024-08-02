@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    /* flex-direction: column;   arranger les elmts en colonne*/
+    flex-direction: row; /* arranger en ligne*/
+    /* justify-content: space-around; arranger les items en distribuant l'espace entre les items */
+    justify-content: space-evenly; /* les espaces sont egales entre les items  */
+    /* flex-wrap: wrap;  permet d'aller a la ligne quand les items deborde*/
+    /* row-gap: 10px;
+    column-gap: 10px;  les deux permettent d'ajouter de l'espace sur la ligne et sur la colonne entre les elements*/
+    /* align-items: stretch; permet d'alligner les items de facon a prendre toute l'espace  */
+}
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+}

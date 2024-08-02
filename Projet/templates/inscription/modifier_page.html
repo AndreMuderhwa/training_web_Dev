@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="Fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<header> 
+    <a href="/list/" class="ppp">Inscrit</a>  <a href="faculte.html" class="pv">Modification</a>   
+
+</header>
+<body>
+    <div class="all">
+        <form class="" method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                <h1>Modification</h1>
+                <tr>
+                    <td class="ligne">
+                        <input type="text" placeholder="nom" class="bb" name="nom" value="{{etudiant.nom}}">
+                        
+                    </td>
+                    <td class="ligne">
+                        <input type="text" placeholder="postnom" name="postnom" value="{{etudiant.postnom}}">
+                    </td>
+                    <td class="ligne">
+                        <input type="text" placeholder="prenom" name="prenom" value="{{etudiant.prenom}}">
+                    </td>
+                    <tr>
+                        <td class="ligne">
+                            <input type="text" placeholder="sexe" class="bb" name="sexe" value="{{etudiant.sexe}}">
+                        </td>
+                        <td class="ligne">
+                            <input type="file" placeholder="image" name="image" value="{{etudiant.imageURL}}">
+                        </td>
+                        <td class="ligne">
+                           <img src="{{etudiant.imageURL}}" style=" height: 40px; width: 40px;"/>
+                        </td>
+                       
+                       
+                    </tr>    
+                    
+                </tr>
+                       
+                
+            </table>
+
+            <input type="submit" class="btn" value="Modifier"/><br>
+            
+        </form>
+    </div>
+    
+       
+                
+
+          
+           
+
+
+</body>
+</html>

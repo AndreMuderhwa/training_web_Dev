@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'liste.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LISTE DES INSCRIPTIONS</h1>
+    <table class="tbl">
+        <thead>
+            <tr >
+                <th>Id</th>
+                <th>nom</th>
+                <th>postnom</th>
+                <th>prenom</th>
+                <th>sexe</th>
+                <th>image</th>
+                <th>Promotion</th>
+                <th>Faculte</th>
+            
+              
+            </tr>
+
+        </thead>
+
+        <tbody >
+            {% for i in inscrits %}
+                <tr class="sss">
+                    <td class="xxx">{{i.refEtudiant.id}} </td>
+                    <td class="xxx">{{i.refEtudiant.nom}} </td>
+                    <td class="xxx">{{i.refEtudiant.postnom}} </td>
+                    <td class="xxx">{{i.refEtudiant.prenom}} </td>
+                    <td class="xxx">{{i.refEtudiant.sexe}} </td>
+                    <td class="xxx"><img src="{{i.refEtudiant.imageURL}}" style="width: 40px; height: 40px; border-radius: 50%;"/> </td>
+                    <td>{{i.refPromotion.designation}}</td>
+                    <td>{{i.refFaculte.designation}}</td>
+                </tr>
+            {% endfor %}
+           
+        </tbody>
+       
+    </table>
+</body>
+</html>
